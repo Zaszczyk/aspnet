@@ -3,3 +3,4 @@ C:\Users\Mateusz\Desktop\STUDIA\dotnet\LabNET01\LabNET01\bin\Projekt.dll
 C:\Users\Mateusz\Desktop\STUDIA\dotnet\LabNET01\LabNET01\bin\Projekt.pdb
 C:\Users\Mateusz\Desktop\STUDIA\dotnet\LabNET01\LabNET01\obj\Debug\Projekt.dll
 C:\Users\Mateusz\Desktop\STUDIA\dotnet\LabNET01\LabNET01\obj\Debug\Projekt.pdb
+C:\Users\Mateusz\Desktop\STUDIA\dotnet\LabNET01\LabNET01\obj\Debug\Projekt.csprojResolveAssemblyReference.cache
