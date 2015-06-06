@@ -13,13 +13,21 @@
             font-family: Verdana;
             color: #000099;
         }
+        #insert_box_users {
+            height: 58px;
+            width: 735px;
+            margin-left: 0px;
+        }
+        #delete_box_users {
+            height: 136px;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-    <h4><a href="javascript: history.go(-1)">Go Back</a></h4>
-    <h4 align="left"><asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" /></h4>
+    <h4 align="left"><a href="javascript: history.go(-1)">Go Back</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" /></h4>
+    <h4 align="left">&nbsp;</h4>
     <h2 align="center" class="auto-style1">Users</h2>
     <h4 align="center">Admin View</h4>
 
@@ -105,9 +113,7 @@
                 <div style="text-align: center;background-color: #CCCCCC;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000;">
                     <asp:DataPager ID="DataPager1" runat="server">
                         <Fields>
-                            <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
-                            <asp:NumericPagerField />
-                            <asp:NextPreviousPagerField ButtonType="Button" ShowLastPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
+                            <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />
                         </Fields>
                     </asp:DataPager>
                 </div>
@@ -135,18 +141,13 @@
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" 
             SelectCommand="SELECT m.UserId, u.UserName, m.Password, m.Email FROM [aspnet_Membership] m JOIN [aspnet_Users] u ON u.UserId = m.UserId">
         </asp:SqlDataSource>
-            <div>
-
-        <br /><br />
-        <div style='margin-left: 600px'>
-            <div id="delete_box_users" runat="server">
+            <div align="left" id="delete_box_users" runat="server">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="label1" runat="server">User Name</asp:Label>
                 <br />
-                <asp:Button ID="Button1" text="DELETE" runat="server" OnClick="Delete_Click" />
-                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="UserName" DataValueField="UserName">
+                <asp:Button ID="Button1" text="DELETE" runat="server" OnClick="Delete_Click" Width="74px" />
+                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="UserName" DataValueField="UserName" Height="16px">
                 </asp:DropDownList>
-                <br /> <br /> <br />
-            </div>
+                <br />
             <div id="insert_box_users" runat="server">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="label13" runat="server">Role Name</asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:Label ID="label10" runat="server">User Name</asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="label11" runat="server">Password</asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="label12" runat="server">E-mail</asp:Label> 
@@ -155,9 +156,13 @@
                 <asp:TextBox ID="insert_role" runat="server"></asp:TextBox>
                 <asp:TextBox ID="insert_username" runat="server"></asp:TextBox>
                 <asp:TextBox ID="insert_password" runat="server"></asp:TextBox>
-                <asp:TextBox ID="insert_email" runat="server"></asp:TextBox>
+                <asp:TextBox ID="insert_email" runat="server" Width="126px"></asp:TextBox>
                 <br /> <br /> <br />
+                <br />
             </div>
+            </div>
+            <div>
+
             <div id="update_box_users" runat="server">
                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="label5" runat="server">User Name</asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="label7" runat="server">Password</asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="label8" runat="server">E-mail</asp:Label> 
@@ -168,6 +173,9 @@
                 <asp:TextBox ID="update_password" runat="server"></asp:TextBox>
                 <asp:TextBox ID="update_email" runat="server"></asp:TextBox>
             </div>
+
+        <br /><br />
+        <div style='margin-left: 600px'>
         </div>
     </div>
     </div>

@@ -19,5 +19,10 @@ namespace Projekt.Pages
             SqlDataSource1.Update();
             Response.Redirect(Request.RawUrl);
         }
+
+        protected void LoginStatus1_LoggingOut(object sender, LoginCancelEventArgs e)
+        {
+
+        }
     }
 }
