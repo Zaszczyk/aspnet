@@ -53,7 +53,7 @@ namespace Projekt.Pages
 
         protected void HideNiezalogowany()
         {
-            Response.Write("Jesteś niezalogowany! <br /> <a href='LoginPage.aspx'> Zaloguj się </a>");
+            Response.Write("Jesteś niezalogowany! <br /> <a href='/Pages/LoginPage.aspx'> Zaloguj się </a>");
             all_page.Visible = false;
         }
 
@@ -77,6 +77,16 @@ namespace Projekt.Pages
             mem.ChangePassword(mem.GetPassword(), update_password.Text);
             Membership.UpdateUser(mem);
             Response.Redirect(Request.RawUrl);
+        }
+
+        protected void DetailsView1_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
+        {
+
+        }
+
+        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
     }

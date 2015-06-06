@@ -5,6 +5,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <title></title>
+    <style type="text/css">
+        .newStyle1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #delete_box_users {
+            height: 49px;
+            width: 599px;
+        }
+        #insert_box_users {
+            height: 72px;
+            width: 596px;
+        }
+    </style>
 </head>
 <body>
     
@@ -21,25 +34,25 @@
         SelectCommand="SELECT m.UserId, u.UserName, m.Password, m.Email FROM [aspnet_Membership] m JOIN [aspnet_Users] u ON u.UserId = m.UserId">
     </asp:SqlDataSource>
 
-    <h4 align="right"><asp:LoginStatus ID="LoginStatus1" runat="server" /></h4>
-    <h2 align="center">User Management</h2>
-        <h3>
+    <h4 align="left"><asp:LoginStatus ID="LoginStatus1" runat="server" /></h4>
+    <h2 align="center"><span class="newStyle1">User Management</span></h2>
+        <h3 align ="left">
         <div id="edit_own_data_users" runat="server" align="center">
-            <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource1">
-                <EditRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+            <asp:DetailsView ID="DetailsView1" runat="server" Height="16px" Width="390px" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" OnPageIndexChanging="DetailsView1_PageIndexChanging">
+                <AlternatingRowStyle BackColor="#CCCCCC" />
+                <EditRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
                 <Fields>
                     <asp:CommandField ShowEditButton="True"/>
                 </Fields>
-                <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
-                <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
-                <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
-                <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+                <FooterStyle BackColor="#CCCCCC" />
+                <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                <PagerStyle ForeColor="Black" HorizontalAlign="Center" BackColor="#999999" />
             </asp:DetailsView>
         </div>
         </h3>
     <div id="admin_view_users" runat="server">
-    <h3>
-    <asp:DataList ID="DataList1" runat="server" AllowPaging="True" DataSourceID="SqlDataSource2" CaptionAlign="Top" HorizontalAlign="Center" CellPadding="3" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" ShowFooter="False" CellSpacing="2" GridLines="Both" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="2px">
+    <h3 align ="left">
+    <asp:DataList align="ID="DataList1" runat="server" AllowPaging="True" DataSourceID="SqlDataSource2" CaptionAlign="Top" HorizontalAlign="Center" CellPadding="3" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" ShowFooter="False" CellSpacing="2" GridLines="Both" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="2px" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
         <FooterStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" />
         <HeaderStyle Font-Bold="True" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="True" HorizontalAlign="Center" VerticalAlign="Middle" Font-Size="Medium" />
         <HeaderTemplate>
@@ -62,12 +75,11 @@
 					</asp:Label>
 				</TD>
 			    <TD>
+                    <asp:Label ID="Label2" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Email") %>'> </asp:Label>
                     <asp:Label ID="Label4" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Password") %> '> 
                     </asp:Label>
                 </TD>
 				<TD>
-					<asp:Label id=Label2 runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Email") %>'>
-					</asp:Label>
 				</TD>
 			</TR>
 	</ItemTemplate>
@@ -75,8 +87,6 @@
     </asp:DataList>
     </h3>
     
-        <br /><br /><br />
-        <div style='margin-left: 500px'>
             <div id="delete_box_users" runat="server">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="label1" runat="server">User Name</asp:Label>
                 <br />
@@ -94,8 +104,7 @@
                 <asp:TextBox ID="insert_username" runat="server"></asp:TextBox>
                 <asp:TextBox ID="insert_password" runat="server"></asp:TextBox>
                 <asp:TextBox ID="insert_email" runat="server"></asp:TextBox>
-                <br /> <br /> <br />
-            </div>
+                <br /> <br /> 
             <div id="update_box_users" runat="server">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="label5" runat="server">User Name</asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="label7" runat="server">Password</asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="label8" runat="server">E-mail</asp:Label> 
@@ -106,9 +115,14 @@
                 <asp:TextBox ID="update_password" runat="server"></asp:TextBox>
                 <asp:TextBox ID="update_email" runat="server"></asp:TextBox>
             </div>
+                <br />
+            </div>
+    
+        <br /><br /><br />
+        <div style='margin-left: 500px'>
+        <asp:LoginName ID="LoginName1" runat="server" Visible ="false"/>
         </div>
     </div>
-        <asp:LoginName ID="LoginName1" runat="server" Visible ="false"/>
     </div>
 </form>
 </body>

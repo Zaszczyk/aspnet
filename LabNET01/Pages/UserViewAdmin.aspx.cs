@@ -10,11 +10,6 @@ namespace Projekt.Pages
 {
     public partial class UserViewAdmin : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
         protected void Delete_Click(object sender, EventArgs e)
         {
             Membership.DeleteUser(DropDownList1.SelectedItem.Value, true);
@@ -32,9 +27,19 @@ namespace Projekt.Pages
             MembershipUser mem = Membership.GetUser(DropDownList2.SelectedItem.Value);
             Roles.AddUserToRole(mem.UserName, insert_role.Text);
             mem.Email = update_email.Text;
-            mem.ChangePassword(mem.GetPassword(), update_password.Text);
+            mem.ChangePassword(mem.ResetPassword(), update_password.Text);
             Membership.UpdateUser(mem);
             Response.Redirect(Request.RawUrl);
+        }
+
+        protected void LoginStatus1_LoggingOut(object sender, LoginCancelEventArgs e)
+        {
+
+        }
+
+        protected void ListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
