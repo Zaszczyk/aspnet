@@ -41,5 +41,10 @@ namespace Projekt.Pages
         {
 
         }
+
+        protected void insert_email_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

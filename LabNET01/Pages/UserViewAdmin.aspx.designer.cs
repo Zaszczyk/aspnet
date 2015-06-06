@@ -148,6 +148,15 @@ namespace Projekt.Pages {
         protected global::System.Web.UI.WebControls.TextBox insert_role;
         
         /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        
+        /// <summary>
         /// insert_username control.
         /// </summary>
         /// <remarks>
@@ -155,6 +164,15 @@ namespace Projekt.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox insert_username;
+        
+        /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
         /// insert_password control.
@@ -166,6 +184,15 @@ namespace Projekt.Pages {
         protected global::System.Web.UI.WebControls.TextBox insert_password;
         
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
         /// insert_email control.
         /// </summary>
         /// <remarks>
@@ -173,6 +200,15 @@ namespace Projekt.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox insert_email;
+        
+        /// <summary>
+        /// RequiredFieldValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
         /// update_box_users control.

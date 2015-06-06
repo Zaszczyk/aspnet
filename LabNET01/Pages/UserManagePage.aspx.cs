@@ -65,6 +65,7 @@ namespace Projekt.Pages
 
         protected void Insert_Click(object sender, EventArgs e)
         {
+
             Membership.CreateUser(insert_username.Text,insert_password.Text, insert_email.Text);
             Response.Redirect(Request.RawUrl);
         }
