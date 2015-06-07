@@ -10,6 +10,11 @@
         .newStyle1 {
             font-family: verdana, Geneva, Tahoma, sans-serif;
         }
+
+        .newStyle2 {
+            font-family: verdana, Geneva, Tahoma, sans-serif;
+            color: red;
+        }
     </style>
 </head>
 <body background="http://www.thepartneringgroup.com/wp-content/uploads/2011/12/sectors-consumer-products.jpg"; opacity: 0.2;>
@@ -20,9 +25,9 @@
             <h4><a href="javascript: history.go(-1)">Go Back</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:LoginStatus ID="LoginStatus1" runat="server" />
             </h4>
-            <h4 align="left">&nbsp;</h4>
-            <h2 align="center" class="newStyle1">Products Table</h2>
-            <h4 align="center">Admin view</h4>
+            <h4 align="left" color: red;>&nbsp;</h4>
+            <h2 align="center" class="newStyle2";>Products Table</h2>
+            <h4 align="center" class="newStyle2";>Admin view</h4>
             <h3>
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="3" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="Black" Height="63px" Width="280px" BorderColor="#999999" BorderStyle="Solid" HorizontalAlign="Center" AllowPaging="True" BackColor="White" BorderWidth="1px" GridLines="Vertical">
                     <AlternatingRowStyle BackColor="#CCCCCC" />

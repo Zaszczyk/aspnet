@@ -12,7 +12,7 @@
         <asp:LoginStatus ID="LoginStatus2" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" />
     </h4>
     <h4 align="left">&nbsp;</h4>
-    <h2 align="center">Products Table </h2>
+    <h2 align="center" color: #ff0000;>Products Table </h2>
     <h2 align="center"><a href="ProductsPage.aspx">ProductsPage.aspx</a></h2>
     <h3>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="3" DataKeyNames="Id" DataSourceID="SqlDataSource2" ForeColor="Black" Height="63px" Width="280px" BorderColor="#999999" BorderStyle="Solid" HorizontalAlign="Center" AllowPaging="True" AllowSorting="True" BackColor="White" BorderWidth="1px" GridLines="Vertical">
@@ -67,7 +67,7 @@
     <br />
     <div id="delete_box" runat="server">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="label1" runat="server">ID</asp:Label>
+        <asp:Label BackColor="red" ID="label1" runat="server">ID</asp:Label>
         <br />
         &nbsp;&nbsp;&nbsp;<asp:Button ID="Button_Delete" runat="server" Text="DELETE" OnClick="DeleteButton_Click" />
         &nbsp;<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Id" DataValueField="Id">

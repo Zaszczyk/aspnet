@@ -213,7 +213,17 @@
                     <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="UserName" DataValueField="UserName">
                     </asp:DropDownList>
                     <asp:TextBox ID="update_password" runat="server"></asp:TextBox>
+                       <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server"
+                        ControlToValidate="insert_username"
+                        ErrorMessage="New password is required."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
                     <asp:TextBox ID="update_email" runat="server"></asp:TextBox>
+                       <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server"
+                        ControlToValidate="insert_username"
+                        ErrorMessage="New email is required."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
                 </div>
 
                 <br />
