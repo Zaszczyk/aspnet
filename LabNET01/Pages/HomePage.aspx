@@ -9,19 +9,18 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    <h4 align="right"><asp:LoginStatus ID="LoginStatus2" runat="server" /></h4>
-                <div align="center">
-                    <h2>Welcome <asp:LoginName ID="LoginName1" runat="server" />!</h2>
-                    <br />
-                    <br />
-                    <br />
-                    <a href="ProductsViewAdmin.aspx">Products View Admin</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="ProductsViewModerator.aspx">Products View Moderator</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="ProductsViewLogged.aspx">Products View Logged</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="UserViewAdmin.aspx">User View Admin</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="UserViewModerator.aspx">User View Moderator</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="UserViewLogged.aspx">User View Logged</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </div>
+        
+                    <h2>Witaj <asp:LoginName ID="LoginName1" runat="server" /></h2>
+        <ul>
+            
+                    <li><a href="ProductsViewAdmin.aspx">Produkty - admin</a></li>
+                    <li><a href="ProductsViewModerator.aspx">Produkty - moderator</a></li>
+                    <li><a href="ProductsViewLogged.aspx">Produkty - zalogowany</a></li>
+                    <li><a href="UserViewAdmin.aspx">Użytkownicy - admin</a></li>
+                    <li><a href="UserViewModerator.aspx">Użytkownicy - moderator</a></li>
+                    <li><a href="UserViewLogged.aspx">Użytkownicy - zalogowany</a></li>
+            <li><asp:LoginStatus ID="LoginStatus2" runat="server" /></li>
+        </ul>
     </div>
     </form>
 </body>

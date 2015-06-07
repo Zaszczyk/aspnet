@@ -1,11 +1,12 @@
-C:\Users\Mateusz\Desktop\STUDIA\dotnet\LabNET01\LabNET01\bin\Projekt.dll.config
-C:\Users\Mateusz\Desktop\STUDIA\dotnet\LabNET01\LabNET01\bin\Projekt.dll
-C:\Users\Mateusz\Desktop\STUDIA\dotnet\LabNET01\LabNET01\bin\Projekt.pdb
-C:\Users\Mateusz\Desktop\STUDIA\dotnet\LabNET01\LabNET01\obj\Debug\Projekt.dll
-C:\Users\Mateusz\Desktop\STUDIA\dotnet\LabNET01\LabNET01\obj\Debug\Projekt.pdb
 C:\Users\Daniel\aspnet\LabNET01\bin\Projekt.dll.config
 C:\Users\Daniel\aspnet\LabNET01\bin\Projekt.dll
 C:\Users\Daniel\aspnet\LabNET01\bin\Projekt.pdb
 C:\Users\Daniel\aspnet\LabNET01\obj\Debug\Projekt.csprojResolveAssemblyReference.cache
 C:\Users\Daniel\aspnet\LabNET01\obj\Debug\Projekt.dll
 C:\Users\Daniel\aspnet\LabNET01\obj\Debug\Projekt.pdb
+C:\Users\Mateusz\Desktop\STUDIA\dotnet\LabNET01\LabNET01\bin\Projekt.dll.config
+C:\Users\Mateusz\Desktop\STUDIA\dotnet\LabNET01\LabNET01\bin\Projekt.dll
+C:\Users\Mateusz\Desktop\STUDIA\dotnet\LabNET01\LabNET01\bin\Projekt.pdb
+C:\Users\Mateusz\Desktop\STUDIA\dotnet\LabNET01\LabNET01\obj\Debug\Projekt.csprojResolveAssemblyReference.cache
+C:\Users\Mateusz\Desktop\STUDIA\dotnet\LabNET01\LabNET01\obj\Debug\Projekt.dll
+C:\Users\Mateusz\Desktop\STUDIA\dotnet\LabNET01\LabNET01\obj\Debug\Projekt.pdb
